@@ -1,0 +1,129 @@
+body {
+    height: 100vh;
+    margin: 0;
+    background: #ffffff;
+    color: #738baa;
+}
+
+.scrollBar::-webkit-scrollbar{
+    display: none;
+}
+
+header{
+    z-index: 9999;
+    background-color:transparent;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    transition: 0.5s ease-in;
+}
+
+nav{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 25%;
+    height: 10vh;
+}
+
+
+a{
+    font-size: 20px;
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.75s;
+}
+
+a:hover{
+    transform: scale(1.3);
+}
+
+.nav-shift{
+    color: red;
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+.ATF{
+    background-image: url("nasa-Q1p7bh3SHj8-unsplash.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.container .left {
+    /*position: relative;*/
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.container .left p {
+    background: white;
+    position: absolute;
+    margin-top: -25%;
+    right: 17%;
+    color: black;
+    padding: 1em;
+    border-radius: 15px;
+    width: 20vw;
+    text-align: left;
+}
+
+.container .yellow {
+    position: relative;
+    top: 50px;
+    height: 270px;
+    opacity: 0;
+}
+
+.container .squig {
+    position: absolute;
+    margin-top: 32%;
+    left: 19%;
+    width: 8vw;
+}
+
+.container .right {
+    display: grid;
+    place-items: center;
+}
+
+.container .right h2 {
+    color: white;
+    font-size: 1.7rem;
+}
+
+.container .right p {
+    line-height: 1.6em;
+}
+
+.animate {
+    opacity: 0;
+}
+
+
+@keyframes anim1 {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
