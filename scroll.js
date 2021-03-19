@@ -1,36 +1,21 @@
-const sections = document.querySelectorAll('.animate');
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = {
+    threshold: 0,
+    rootMargin: "0px 0px -250px 0px"
+};
 
-observer = new IntersectionObserver((entries) => {
-
+const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
     entries.forEach(entry => {
-        if (entry.intersectionRatio > 0) {
-            entry.target.style.animation = `anim1 2s ${entry.target.dataset.delay} forwards ease-out`;
+        if (!entry.isIntersecting) {
+            entry.target.classList.remove('appear');
         } else {
-            entry.target.style.animation = 'none';
+            entry.target.classList.add('appear');
+            appearOnScroll.unobserve(entry.target);
         }
-    })
+    });
+}, appearOptions);
 
-})
-
-sections.forEach(section => {
-    observer.observe(section)
-})
-const animations = document.querySelectorAll('.animate1');
-
-observer = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-        if (entry.intersectionRatio > 0) {
-            entry.target.style.animation = `anim2 2s ${entry.target.dataset.delay} forwards ease-out`;
-        } else {
-            entry.target.style.animation = 'none';
-        }
-    })
-
-})
-
-animations.forEach(animation => {
-    observer.observe(animation)
-})
-
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
 
