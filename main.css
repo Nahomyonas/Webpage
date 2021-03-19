@@ -101,10 +101,19 @@ article div img {
     opacity: 1;
 }
 
-/*.left{*/
-/*    transform: translateX(-50%);*/
-/*}*/
+.left{
+    transform: translateX(50%);
+}
 
-/*.right{*/
-/*    transform: translateX(50%);*/
-/*}*/
+.right{
+    transform: translateX(-50%);
+}
+
+.left, .right{
+    transition: transform 1s ease-in;
+}
+
+.left.appear, .right.appear{
+    transform: translateX(0);
+}
+
