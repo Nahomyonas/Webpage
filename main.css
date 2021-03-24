@@ -67,7 +67,7 @@ section {
 }
 
 .ATF {
-    background-image:url("nasa-Q1p7bh3SHj8-unsplash.jpg") ;
+    background-image: url("nasa-Q1p7bh3SHj8-unsplash.jpg");
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -89,7 +89,7 @@ section {
     grid-auto-rows: minmax(100px, auto);
 }
 
-article {
+.About article {
     background-color: #FF00F4;
     margin: 0 auto;
     width: 75%;
@@ -145,7 +145,7 @@ article div img {
     align-items: center;
     margin: 40px 0 40px 0;
     width: 100%;
-    height: 95vh;
+    height: 100vh;
     background-image: url("christopher-gower-m_HRfLhgABo-unsplash.jpg");
     background-size: cover;
     background-position: center;
@@ -195,7 +195,7 @@ article div img {
 
 .slide-content span {
     font-size: 5rem;
-    color: #fff;
+    color: black;
 }
 
 .arrow {
@@ -224,7 +224,7 @@ article div img {
 
 /*This marks the end of the 'things we do section'*/
 
-.ATF3{
+.ATF3 {
     height: 100vh;
     width: 100%;
     background-image: url("images/330515.jpg");
@@ -242,32 +242,70 @@ article div img {
 .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
+    place-items: center;
+    /*grid-gap: 10px;*/
     width: 100%;
     height: 100vh;
 }
 
-footer {
-    width: 100%;
-    height: 65vh;
+.projects article {
+    width: 87%;
+    height: 87%;
+    transition: 0.5s  ease-in-out;
 }
 
-footer div {
+.projects article:hover{
+    filter: brightness(40%);
+}
+
+.projects article div {
+    border: 4px solid black;
+    width: 90%;
+    height: 90%;
+}
+
+.projects article div img {
+    border: 4px solid red;
+}
+
+/*this marks the end of the projects section*/
+
+.recog {
+    background-color: #ff00f4;
+    height: 100vh;
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.recog > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-}
-
-footer div img {
     width: 100%;
-    height: 100%;
 }
 
-.anim{
-    transition: transform 1s ease-in;
-    transform: translateY(50%);
+.recog article {
+    display: grid;
+    width: 100%;
+    height: inherit;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
 }
 
-.anim.appear{
-    transform: translateY(0);
+.recog article div {
+    color: rgb(0, 252, 250);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("campaign-creators-OGOWDVLbMSc-unsplash.jpg");
+    background-size: cover;
+    width: 100%;
 }
+
+/*this marks the end of the previous section */
+
 
